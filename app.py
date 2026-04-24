@@ -3,6 +3,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "AWS Flask App is Live"
+    return "CI/CD is working"
 
 app.run(host='0.0.0.0', port=5000)
