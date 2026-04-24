@@ -16,7 +16,7 @@ jobs:
 
     steps:
 
-      - name: Connect & Deploy
+      - name: Deploy to EC2
 
         uses: appleboy/ssh-action@v1.0.3
 
@@ -38,4 +38,5 @@ jobs:
 
             pkill -f app.py || true
 
+            nohup python3 app.py > output.log 2>&1 &
             nohup python3 app.py > output.log 2>&1 &
